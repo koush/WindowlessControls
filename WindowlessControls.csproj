@@ -1,0 +1,164 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A429DD8A-6C61-4CF3-972E-25CA67BEDF31}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowlessControls</RootNamespace>
+    <AssemblyName>WindowlessControls</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.02</OSVersion>
+    <DeployDirSuffix>WindowlessControls</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'TFSBuild|AnyCPU' ">
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <OutputPath>bin\TFSBuild\</OutputPath>
+    <DefineConstants>TRACE;PocketPC</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonControls\ButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\CheckBoxControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\DropdownTextControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\HyperlinkButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\NumericControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControls\TextControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DependencyProperty.cs" />
+    <Compile Include="CommonControls\DropdownControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormattedLabel.cs" />
+    <Compile Include="CommonControls\ItemsControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OverlayPanel.cs" />
+    <Compile Include="DockPanel.cs" />
+    <Compile Include="EncapsulatedList.cs" />
+    <Compile Include="Grid.cs" />
+    <Compile Include="PlatformAPIs\PlatformBitmap.cs" />
+    <Compile Include="PlatformAPIs\WindowsCEIcon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="RelativePanel.cs" />
+    <Compile Include="SerializableControl.cs" />
+    <Compile Include="SmartColor.cs" />
+    <Compile Include="WindowlessControlProxy.cs" />
+    <Compile Include="WindowlessRectangle.cs" />
+    <Compile Include="StackPanel.cs" />
+    <Compile Include="PlatformAPIs\WinCE\IImagingFactory.cs" />
+    <None Include="PlatformAPIs\WinCE\PlatformAPIs.cs" />
+    <Compile Include="WindowlessControl.cs" />
+    <Compile Include="CommonControls\EditModeControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowlessControlHost\WindowlessControlHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowlessControlHost\WindowlessControlHostClick.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowlessControlHost\WindowlessControlHostKey.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowlessControlHost\WindowlessControlHostPaint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowlessControlWrapper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowlessImage.cs" />
+    <Compile Include="WindowlessLabel.cs" />
+    <Compile Include="WindowlessPanel.cs" />
+    <Compile Include="WindowlessPaintControl.cs" />
+    <Compile Include="WrapPanel.cs" />
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v3.5'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+</Project>
